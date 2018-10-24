@@ -7,6 +7,7 @@ class Header extends Component {
         <h1 className='title'>
           Fetch  
         </h1>
+        <img src='/images/aggie.jpg' />
       </header>
     )
   }

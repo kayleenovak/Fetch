@@ -1,7 +1,7 @@
 const adoptableDogs = {
   puppy: [
     { name: 'Hannah',
-      img: 'hannah.jpg'
+      img: './images/hannah.jpg'
       breed: 'Border Collie',
       mix_breed: false,
       gender: 'Female',
@@ -14,7 +14,7 @@ const adoptableDogs = {
       rescue: 'Downtown Dog Rescue'
     },
     { name: 'Jude',
-      img: 'jude.jpg'
+      img: './images/jude.jpg',
       breed: 'Catahoula Leopard Dog',
       mix_breed: true,
       gender: 'Male',
@@ -27,7 +27,7 @@ const adoptableDogs = {
       rescue: 'Little White Dog Rescue'
     },
     { name: 'Wiley',
-      img: 'wiley.jpg'
+      img: './images/wiley.jpg',
       breed: 'Belgian Shepherd',
       mix_breed: true,
       gender: 'Male',
@@ -40,7 +40,7 @@ const adoptableDogs = {
       rescue: 'The Good Dog Rescue'
     },
     { name: 'Bessy',
-      img: 'bessy.jpg'
+      img: '/images/bessy.jpg',
       breed: 'Golden Retriever',
       mix_breed: true,
       gender: 'Female',
@@ -53,7 +53,7 @@ const adoptableDogs = {
       rescue: 'Main Line Animal Rescue'
     },
     { name: 'Spirit',
-      img: 'spirit.jpg'
+      img: '/images/spirit.jpg'
       breed: 'Labrador Retriever',
       mix_breed: false,
       gender: 'Male',
@@ -68,7 +68,7 @@ const adoptableDogs = {
   ],
   young: [
     { name: 'Dodie',
-      img: 'dodie.jpg'
+      img: '/images/dodie.jpg'
       breed: 'Catahoula Leopard Dog',
       mix_breed: true,
       gender: 'Female',
@@ -81,7 +81,7 @@ const adoptableDogs = {
       rescue: 'Soul Dog Rescue'
     },
     { name: 'Tatum',
-      img: 'tatum.jpg'
+      img: '/images/tatum.jpg'
       breed: 'Mastiff',
       mix_breed: true,
       gender: 'Male',
@@ -95,7 +95,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Cody',
-      img: 'cody.jpg'
+      img: '/images/cody.jpg'
       breed: 'Siberian Husky',
       mix_breed: true,
       gender: 'Male',
@@ -109,7 +109,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Benji',
-      img: 'benji.jpg'
+      img: '/images/benji.jpg'
       breed: 'American Bulldog',
       mix_breed: true,
       gender: 'Male',
@@ -123,7 +123,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Beans',
-      img: 'beans.jpg'
+      img: '/images/beans.jpg'
       breed: 'Australian Cattle Dog',
       mix_breed: true,
       gender: 'Female',
@@ -137,7 +137,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Skeeter',
-      img: 'skeeter.jpg'
+      img: '/images/skeeter.jpg'
       breed: 'Beagle',
       mix_breed: false,
       gender: 'Female',
@@ -151,7 +151,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Ezra',
-      img: 'ezra.jpg'
+      img: '/images/ezra.jpg'
       breed: 'German Shepherd',
       mix_breed: false,
       gender: 'Male',
@@ -165,7 +165,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Tim',
-      img: 'tim.jpg'
+      img: '/images/tim.jpg'
       breed: 'Blue Heeler',
       mix_breed: true,
       gender: 'Male',
@@ -179,7 +179,7 @@ const adoptableDogs = {
     },
     {
       name: 'Brandon',
-      img: 'brandon.jpg'
+      img: '/images/brandon.jpg'
       breed: 'Weimaraner',
       mix_breed: true,
       gender: 'Male',
@@ -193,7 +193,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Piper',
-      img: 'piper.jpeg'
+      img: '/images/piper.jpeg'
       breed: 'Belgian Shepherd',
       mix_breed: false,
       gender: 'Female',
@@ -207,7 +207,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Zach',
-      img: 'zach.jpeg'
+      img: '/images/zach.jpeg'
       breed: 'Bull Terrier',
       mix_breed: true,
       gender: 'Male',
@@ -221,7 +221,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Sour Cream',
-      img: 'sour_cream.jpg'
+      img: '/images/sour_cream.jpg'
       breed: 'Bull Terrier',
       mix_breed: false,
       gender: 'Male',
@@ -235,7 +235,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Zeus',
-      img: 'zeus.jpg'
+      img: '/images/zeus.jpg'
       breed: 'Cane Corso',
       mix_breed: false,
       gender: 'Male',
@@ -249,7 +249,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Floyd',
-      img: 'floyd.jpg'
+      img: '/images/floyd.jpg'
       breed: 'Great Pyrenees',
       mix_breed: false,
       gender: 'Male',
@@ -263,7 +263,7 @@ const adoptableDogs = {
     },
     { 
       name: 'Rio',
-      img: 'rio.jpg'
+      img: '/images/rio.jpg'
       breed: 'Chihuahua',
       mix_breed: false,
       gender: 'Female',
@@ -279,7 +279,7 @@ const adoptableDogs = {
 adult: [
     {
       name: 'Spike',
-      img: 'spike.jpg'
+      img: '/images/spike.jpg'
       breed: 'Australian Cattle Dog',
       mix_breed: true,
       gender: 'Male',
@@ -293,7 +293,7 @@ adult: [
     },
     {
       name: 'Cooper',
-      img: 'cooper.jpg'
+      img: '/images/cooper.jpg'
       breed: 'Hound',
       mix_breed: true,
       gender: 'Male',
@@ -307,7 +307,7 @@ adult: [
     },
     {
       name: 'Pandora',
-      img: 'pandora.jpg'
+      img: '/images/pandora.jpg'
       breed: 'Labrador Retriever',
       mix_breed: false,
       gender: 'Female',
@@ -321,7 +321,7 @@ adult: [
     },
     { 
       name: 'Jimmy',
-      img: 'jimmy.jpg'
+      img: '/images/jimmy.jpg'
       breed: 'Labrador Retriever',
       mix_breed: false,
       gender: 'Male',
@@ -335,7 +335,7 @@ adult: [
     },
     {
       name: 'Boone',
-      img: 'boone.jpg'
+      img: '/images/boone.jpg'
       breed: 'Coonhound',
       mix_breed: true,
       gender: 'Male',
@@ -349,7 +349,7 @@ adult: [
     },
     {
       name: 'Azur',
-      img: 'azur.jpg'
+      img: '/images/azur.jpg'
       breed: 'Siberian Husky',
       mix_breed: true,
       gender: 'Female',
@@ -363,7 +363,7 @@ adult: [
     },
     {
       name: 'Dollie',
-      img: 'dollie.jpg'
+      img: '/images/dollie.jpg'
       breed: 'Welsh Corgi',
       mix_breed: false,
       gender: 'Female',
@@ -377,7 +377,7 @@ adult: [
     },
     {
       name: 'Harrison',
-      img: 'harrison.jpg'
+      img: '/images/harrison.jpg'
       breed: 'Greyhound',
       mix_breed: true,
       gender: 'Male',
@@ -391,7 +391,7 @@ adult: [
     },
     {
       name: 'Harrison',
-      img: 'harrison2.jpg'
+      img: '/images/harrison2.jpg'
       breed: 'Rottweiler',
       mix_breed: false,
       gender: 'Male',
@@ -405,7 +405,7 @@ adult: [
     },
     {
       name: 'Messiah',
-      img: 'Messiah.jpeg'
+      img: '/images/messiah.jpeg'
       breed: 'German Shepherd',
       mix_breed: true,
       gender: 'Male',
@@ -419,7 +419,7 @@ adult: [
     },
     {
       name: 'Foxy',
-      img: 'foxy.jpg'
+      img: '/images/foxy.jpg'
       breed: 'Fox Terrier',
       mix_breed: true,
       gender: 'Female',
@@ -433,7 +433,7 @@ adult: [
     },
     {
       name: 'Louis Lane',
-      img: 'Louis_Lane.jpg'
+      img: '/images/louis_lane.jpg'
       breed: 'Australian Shepherd',
       mix_breed: false,
       gender: 'Female',
@@ -447,7 +447,7 @@ adult: [
     },
     {
       name: 'Kaia',
-      img: 'kaia.jpg'
+      img: '/images/kaia.jpg'
       breed: 'English Bulldog',
       mix_breed: false,
       gender: 'Female',
@@ -461,7 +461,7 @@ adult: [
     },
     {
       name: 'Chico',
-      img: 'chico.jpg'
+      img: '/images/chico.jpg'
       breed: 'Doberman Pinscher',
       mix_breed: true,
       gender: 'Male',
@@ -475,7 +475,7 @@ adult: [
     },
     {
       name: 'Aggie',
-      img: 'aggie.jpg'
+      img: '/images/aggie.jpg'
       breed: 'Saint Bernard',
       mix_breed: false,
       gender: 'Male',
@@ -489,7 +489,7 @@ adult: [
     },
     {
       name: 'Midnight',
-      img: 'midnight.jpeg'
+      img: '/images/midnight.jpeg'
       breed: 'Cocker Spaniel',
       mix_breed: false,
       gender: 'Male',
@@ -503,7 +503,7 @@ adult: [
     },
     {
       name: 'Daryl',
-      img: 'daryl.jpeg'
+      img: '/images/daryl.jpeg'
       breed: 'Doberman Pinscher',
       mix_breed: false,
       gender: 'Male',
@@ -517,7 +517,7 @@ adult: [
     },
     {
       name: 'Kelsey',
-      img: 'kelsey.jpg'
+      img: '/images/kelsey.jpg'
       breed: 'Chihuahua',
       mix_breed: false,
       gender: 'Female',
@@ -531,7 +531,7 @@ adult: [
     },
     {
       name: 'Bessie',
-      img: 'bessie.jpg'
+      img: '/images/bessie.jpg'
       breed: 'Beagle',
       mix_breed: true,
       gender: 'Female',
@@ -545,7 +545,7 @@ adult: [
     },
     {
       name: 'Lucy',
-      img: 'lucy.jpg'
+      img: '/images/lucy.jpg'
       breed: 'Basset Hound',
       mix_breed: true,
       gender: 'Female',
@@ -561,7 +561,7 @@ adult: [
   senior: [
     {
       name: 'Kali',
-      img: 'kali.jpg'
+      img: '/images/kali.jpg'
       breed: 'American Bulldog',
       mix_breed: false,
       gender: 'Male',
@@ -576,49 +576,56 @@ adult: [
   ]
 }
 
-const rescues = {
-  Big_Fluffy_Dog_Rescue: {
+const rescues = [
+  { 
+    name: 'Big Fluffy Dog Rescue',
     Location: 'Littleton, CO',
     Email: 'bigfluffydogrescue@gmail.com',
     Phone: '303-345-9873',
     Webiste: 'www.bigfluffydogrescue.com'
   },
-  OutPaws_Animal_Rescue: {
+  {
+    name: 'OutPaws Animal Rescue',
     Location: 'Wheatridge, CO',
     Email: 'outpawsanimalrescue@yahoo.com',
     Phone: '303-384-0238',
     Webiste: 'www.outpawsanimalrescue.com'
   },
-  Soul_Dog_Rescue: {
+  {
+    name: 'Soul Dog Rescue',
     Location: 'Aurora, CO',
     Email: 'souldogrescue@gmail.com',
     Phone: '303-373-8462',
     Webiste: 'www.souldogrescue.com'
   },
-  Main_Line_Animal_Rescue: {
+  {
+    name: 'Main Line Animal Rescue'
     Location: 'Arvada, CO',
     Email: 'mainlineanimalrescue@gmail.com',
     Phone: '303-937-7823',
     Webiste: 'www.mainlineanimalrescue.com'
   },
-  Downtown_Dog_Rescue: {
+  { 
+    name: 'Downtown Dog Rescue',
     Location: 'Denver, CO',
     Email: 'downtowndogrescue@gmail.com',
     Phone: '303-902-8732',
     Webiste: 'www.downtowndogrescue.com'
   },
-  The_Good_Dog_Rescue: {
+  { 
+    name: 'The Good Dog Rescue',
     Location: 'Englewood, CO',
     Email: 'thegooddogrescue@gmail.com',
     Phone: '303-926-7844',
     Webiste: 'www.thegooddogrescue.com'
   },
-  Little_White_Dog_Rescue: {
+  { 
+    name: 'Little White Dog Rescue',
     Location: 'Parker, CO',
     Email: 'littlewhitedogrescue@gmail.com',
     Phone: '303-903-1297',
     Webiste: 'www.littlewhitedogrescue.com'
   }
-}
+]
 
 module.exports = { adoptableDogs, rescues }
