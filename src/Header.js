@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import './Header.css'
 
 class Header extends Component {
   render() {
     return (
       <header>
         <h1 className='title'>
-          Fetch  
+          Fetch <i className="fas fa-dog"></i>
         </h1>
-        <img src='/images/aggie.jpg' />
+
       </header>
     )
   }
