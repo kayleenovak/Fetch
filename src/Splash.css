@@ -1,3 +1,48 @@
+.splash-cont {
+  margin: 0 150px;
+}
+.switch {
+  display: flex;
+  flex-direction: row;
+  width: 135px;
+  border-radius: 20px;
+  border: 1px gray;
+  background: linear-gradient(to right, hsl(0,0,90%), white, hsl(0,0,90%));
+  overflow: hidden;
+  box-shadow: 2px 2px 8px lightgray inset;
+  margin: 5px;
+}
+
+.radios {
+  color: gray;  
+  appearance: none;
+  display: block;
+  position: relative;
+  line-height: 1.5em;
+  height: 18px;
+  width: 40px;
+  border: 0.1em solid transparent;
+  outline: none;
+  text-align: center;
+}
+
+.radios:hover {
+  color: black;
+}
+
+.radios:checked {
+  transition: 1s;
+  border: 0.1em outset hsl(0,0,75%);
+  border-radius: 50px;
+  background: linear-gradient(to right, white, hsl(0,0,95%));
+  box-shadow: 2px 2px 5px gray;
+  color: black;
+}
+
+.radios::after {
+  content: attr(value);
+}
+
 .splash {
   background: #11c4d3;
   height: 100vh;
