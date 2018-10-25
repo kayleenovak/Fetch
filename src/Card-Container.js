@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import './App.css';
+
 import cardContainerStyle from './Card-Container.css';
+
 
 export default class CardContainer extends Component {
   render() {
@@ -11,7 +14,7 @@ export default class CardContainer extends Component {
       return acc
       }, [])
     return (
-      <div className='card-container'> 
+      <div className='display-none'> 
         {dogs.map((dog, index) => {
           return <Card key={index} dog={dog} />
         })}
