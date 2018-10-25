@@ -28,6 +28,10 @@
   display: none;
 }
 
+.display-block {
+  display: block;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
