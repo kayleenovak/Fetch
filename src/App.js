@@ -18,7 +18,10 @@ export default class App extends Component {
       checkedBoxes: [],
       filteredDogs: [],
     };
+    this.filterDogs = this.filterDogs.bind(this);
+    this.allDogs = this.allDogs.bind(this)
   }
+
   componentDidMount = () => {
      fetch('http://whateverly-datasets.herokuapp.com/api/v1/adoptableDogs')
        .then(response => response.json())
@@ -34,7 +37,7 @@ export default class App extends Component {
        .catch(error => console.log(error))
    }
 
-  getCheckedBoxes = () => {
+  getCheckedRadios = () => {
     let filterInputs = document.querySelectorAll('.radios')
     for (var i = 0; i < filterInputs.length; i++) {
       if(filterInputs[i].checked === true) {
@@ -44,39 +47,40 @@ export default class App extends Component {
   }
 
   allDogs = (dogs) => {
-    Object.keys(dogs).reduce((acc, key) => {
+    let allOfTheDogs = Object.keys(dogs).reduce((acc, key) => {
       dogs[key].forEach((dog, index) => {
         acc.push(dog)
       })
       return acc
     }, [])
+    return allOfTheDogs
   }
 
-  filterDogs = () => {
-    let dogs = this.allDogs(this.state.adoptableDogs)
-    this.state.checkedBoxes.forEach(checkbox => {
-      let filteredArray = []
-      let checkboxId = checkbox.id
-      let checkboxName = checkbox.name
-      dogs.forEach(dog => {
-        let dogKeyValue = String(dog[checkboxId])
-        if (dogKeyValue === checkboxName) {
-          this.state.filteredDogs.push(dog)
-        }
-      })
-      dogs = this.state.filteredDogs
+  filterDogs = (event) => {
+    event.preventDefault()
+    this.getCheckedRadios()
+    let dogs = this.allDogs(this.state.adoptableDogs);
+    let filteredDogs = dogs.filter(dog => {
+      if(dog.gender === this.state.checkedBoxes[0].id && dog.size === this.state.checkedBoxes[2].id && dog.age < 1000) {
+        return dog
+      }
     })
-    this.state.adoptableDogs = dogs
+    this.setState(
+      {
+        filteredDogs: filteredDogs
+      } 
+    )
   }
 
   render() {
+    console.log(this.state.filteredDogs)
     return (
       <div className="App">
         <Splash filterDogs={ this.filterDogs }/>
         <Header />
         <Filter />
         <Search />
-        <CardContainer dogs={this.state.adoptableDogs} />
+        <CardContainer dogs={ this.state.filteredDogs } adoptableDogs={ this.state.adoptableDogs} allDogs = { this.allDogs }/>
         <Footer />
       </div>
     );
