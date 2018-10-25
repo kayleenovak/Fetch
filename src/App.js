@@ -60,8 +60,11 @@ export default class App extends Component {
     event.preventDefault()
     this.getCheckedRadios()
     let dogs = this.allDogs(this.state.adoptableDogs);
+    let sizeCheckbox = this.state.checkedBoxes[2].id.toLowerCase()
     let filteredDogs = dogs.filter(dog => {
-      if(dog.gender === this.state.checkedBoxes[0].id && dog.size === this.state.checkedBoxes[2].id && dog.age < 1000) {
+      let dogSize = dog.size.toLowerCase()
+      if(this.state.checkedBoxes[0].id.includes(dog.gender) && sizeCheckbox.includes(dogSize)) {
+        console.log(1)
         return dog
       }
     })

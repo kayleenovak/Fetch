@@ -7,7 +7,6 @@ import cardContainerStyle from './Card-Container.css';
 
 export default class CardContainer extends Component {
   render() {
-    console.log(this.props)
     return (
       <div className='display-none card-container-selector'> 
         {this.props.dogs.map((dog, index) => {

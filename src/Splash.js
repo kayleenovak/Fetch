@@ -30,8 +30,8 @@ export default class Splash extends Component {
         <form>
             <div className="switch">
               <input className='radios' type="radio" name="choose1" id='Male' value="Male" />
-              <input className='radios' type="radio" name="choose1" value="both" defaultChecked />
-              <input className='radios' type="radio" name="choose1" value="Female" />
+              <input className='radios' type="radio" name="choose1" id='Male Female' value="both" defaultChecked />
+              <input className='radios' type="radio" name="choose1" id='Female' value="Female" />
             </div>
           </form>
           <form>
@@ -45,12 +45,11 @@ export default class Splash extends Component {
             <div className="switch">
               <input className='radios' type="radio" name="choose3" id='Large' value="Large" />
               <input className='radios' type="radio" name="choose3" id='Medium' value="Medium" />
-              <input className='radios' type="radio" name="choose3" value="both" defaultChecked />
+              <input className='radios' type="radio" name="choose3" id='Large Medium Small' value="both" defaultChecked />
               <input className='radios' type="radio" name="choose3" id='Small' value="Small" />
             </div>
           <button className='fetch-dogs-btn' onClick={ this.displayMainPage }>Fetch Dogs</button>
         </form>
-        <button onClick={ this.displayMainPage } className='show-all-dogs-btn'>Show all dogs</button>
       </div>
     )
   }
