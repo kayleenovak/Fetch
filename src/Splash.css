@@ -13,13 +13,6 @@
   margin: 5px;
 }
 
-
-/*.switch::after {
-      trasition: 1s;
-      padding: 0.25em 0.5em; 
-      vertical-align: middle;
-}*/
-
 .radios {
   color: gray;  
   appearance: none;
@@ -37,7 +30,6 @@
   color: black;
 }
 
-
 .radios:checked {
   transition: 1s;
   border: 0.1em outset hsl(0,0,75%);
@@ -45,13 +37,47 @@
   background: linear-gradient(to right, white, hsl(0,0,95%));
   box-shadow: 2px 2px 5px gray;
   color: black;
-
 }
 
 .radios::after {
   content: attr(value);
-  /*text-align: center;*/
-
-
 }
 
+.splash {
+  background: #11c4d3;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.splash-title {
+  color: white;
+  margin-top: 0;
+  font-size: 6em;
+}
+
+.fetch-dogs-btn {
+  background-color: #865AB7; background-image: -webkit-gradient(linear, left top, left bottom, from(#865AB7), to(#3D2B81));
+  border: none;
+  margin-left: -4.1px;
+  width: 150px;
+  height: 30px;
+  color: white;
+  font-size: 1em;
+}
+
+.fetch-dogs-btn:hover {
+    background-color: #865AB7; background-image: -webkit-gradient(linear, left top, left bottom, from(#5d3e80), to(#24194d));
+}
+
+.show-all-dogs-btn {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  width: 150px;
+  font-size: .8em;
+}
