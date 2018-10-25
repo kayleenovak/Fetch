@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Card from './Card';
 import './App.css';
 
+import cardContainerStyle from './Card-Container.css';
+
+
 export default class CardContainer extends Component {
   render() {
       const dogs = Object.keys(this.props.dogs).reduce((acc, key) => {
