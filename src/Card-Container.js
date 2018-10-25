@@ -14,7 +14,7 @@ export default class CardContainer extends Component {
       return acc
       }, [])
     return (
-      <div className='display-none'> 
+      <div className='display-none card-container-selector'> 
         {dogs.map((dog, index) => {
           return <Card key={index} dog={dog} />
         })}

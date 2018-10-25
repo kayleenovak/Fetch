@@ -4,7 +4,7 @@ import './App.css';
 export default class Search extends Component {
   render() {
     return (
-      <div className='display-none'>
+      <div>
         <input type='search' />
         <button>Search</button>
       </div>

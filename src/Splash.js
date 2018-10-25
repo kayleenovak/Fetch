@@ -8,13 +8,12 @@ export default class Splash extends Component {
   displayMainPage = (event) => {
     event.preventDefault();
     let splashPage = document.querySelector('.splash')
-    let displayNone = document.querySelectorAll('.display-none')
+    let cardContainer = document.querySelector('.card-container-selector')
     splashPage.classList.remove('splash')
     splashPage.classList.add('display-none')
-    displayNone.forEach(element => {
-      element.classList.remove('displayNone')
-      element.classList.add('display-block')
-    })
+    cardContainer.classList.remove('display-none')
+    cardContainer.classList.add('card-container')
+
   }
 
   render() {
@@ -41,7 +40,7 @@ export default class Splash extends Component {
               <input className='radios' type="radio" name="choose3" value="both" defaultChecked />
               <input className='radios' type="radio" name="choose3" value="Small" />
             </div>
-          <button className='fetch-dogs-btn'>Fetch Dogs</button>
+          <button className='fetch-dogs-btn' onClick={ this.props.filterDogs }>Fetch Dogs</button>
         </form>
         <button onClick={this.displayMainPage} className='show-all-dogs-btn'>Show all dogs</button>
       </div>
