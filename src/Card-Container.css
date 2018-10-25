@@ -1,0 +1,7 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 225px);
+  grid-gap: 20px;
+  justify-content: space-around;
+  padding: 25px 25px 25px 75px;
+}
