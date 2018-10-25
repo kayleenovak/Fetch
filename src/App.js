@@ -31,12 +31,12 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header className='display-none'/>
         <Splash />
-        <Filter />
-        <Search />
-        <CardContainer dogs={this.state.adoptableDogs} />
-        <Footer />
+        <Filter className='display-none'/>
+        <Search className='display-none'/>
+        <CardContainer dogs={this.state.adoptableDogs} className='display-none'/>
+        <Footer className='display-none'/>
       </div>
     );
   }
