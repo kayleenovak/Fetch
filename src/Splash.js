@@ -8,7 +8,6 @@ export default class Splash extends Component {
     event.preventDefault();
     let splashPage = document.querySelector('.splash')
     let displayNone = document.querySelectorAll('.display-none')
-    console.log(splashPage)
     splashPage.classList.remove('splash')
     splashPage.classList.add('display-none')
     displayNone.forEach(element => {
