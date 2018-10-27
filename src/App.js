@@ -64,7 +64,6 @@ export default class App extends Component {
     let filteredDogs = dogs.filter(dog => {
       let dogSize = dog.size.toLowerCase()
       if(this.state.checkedBoxes[0].id.includes(dog.gender) && sizeCheckbox.includes(dogSize)) {
-        console.log(1)
         return dog
       }
     })
@@ -75,14 +74,31 @@ export default class App extends Component {
     )
   }
 
+  searchFilter = (event) => {
+    let dogs = this.allDogs(this.state.adoptableDogs);
+    let filteredDogs = dogs.filter((currentDog) => {
+      return currentDog.name.toLowerCase() === document.querySelector('.search-bar').value.toLowerCase()
+    });
+    this.setState({
+      filteredDogs: filteredDogs
+    })
+  }
+
+  resetDogs = (event) => {
+    console.log('adoptable', this.state.adoptableDogs)
+    let dogs = this.allDogs(this.state.adoptableDogs);
+    this.setState({
+      filteredDogs: dogs
+    })
+  }
+
   render() {
-    console.log(this.state.filteredDogs)
     return (
       <div className="App">
         <Splash filterDogs={ this.filterDogs }/>
         <Header />
         <Filter />
-        <Search />
+        <Search searchFilter={ this.searchFilter } resetDogs={this.resetDogs} />
         <CardContainer dogs={ this.state.filteredDogs } adoptableDogs={ this.state.adoptableDogs} allDogs = { this.allDogs }/>
         <Footer />
       </div>
