@@ -18,8 +18,8 @@ export default class App extends Component {
       checkedBoxes: [],
       filteredDogs: [],
     };
-    this.filterDogs = this.filterDogs.bind(this);
-    this.allDogs = this.allDogs.bind(this)
+    // this.filterDogs = this.filterDogs.bind(this);
+    // this.allDogs = this.allDogs.bind(this)
   }
 
   componentDidMount = () => {

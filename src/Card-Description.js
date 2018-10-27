@@ -9,7 +9,6 @@ export default class CardDescription extends Component {
         <p>Age: {this.props.description.age}</p>
         <p>Sex: {this.props.description.gender}</p>
         <p>Breed: {this.props.description.breed}</p>
-        
 
       </div>
     )
