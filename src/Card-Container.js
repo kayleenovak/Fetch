@@ -10,7 +10,7 @@ export default class CardContainer extends Component {
     return (
       <div className='display-none card-container-selector'> 
         {this.props.dogs.map((dog, index) => {
-          return <Card key={index} dog={dog} />
+          return <Card key={index} dog={dog} rescues={this.props.rescues} />
         })}
       </div>
     )

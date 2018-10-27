@@ -73,7 +73,7 @@
 }
 
 .fetch-dogs-btn:hover {
-    background-color: #865AB7; background-image: -webkit-gradient(linear, left top, left bottom, from(#5d3e80), to(#24194d));
+  background-color: #865AB7; background-image: -webkit-gradient(linear, left top, left bottom, from(#5d3e80), to(#24194d));
 }
 
 .show-all-dogs-btn {

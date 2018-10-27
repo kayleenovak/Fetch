@@ -26,10 +26,9 @@
 }
 
 .expanded-card {
-  z-index: 90000000000;
-  position: absolute;
-  height: 450px;
-  width: 880px;
+  height: 525px;
+  grid-column: span 6;
+  transition: 1s;
 }
 
 .dog-img {
@@ -37,13 +36,24 @@
   height: 100px;
   object-fit: cover;
   border-radius: 10px;
-  z-index: 1000000000001;
+}
+
+.expanded-img {
+  height: 220px;
+}
+
+.icon {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: relative;
+  top: -7px;
 }
 
 @-webkit-keyframes wiggle {
-  0% {-webkit-transform: rotate(2deg);}
-  25% {-webkit-transform: rotate(-2deg);}
-  50% {-webkit-transform: rotate(5deg);}
-  75% {-webkit-transform: rotate(-2deg);}
+  0% {-webkit-transform: rotate(1deg);}
+  25% {-webkit-transform: rotate(-.5deg);}
+  50% {-webkit-transform: rotate(1deg);}
+  75% {-webkit-transform: rotate(-.5deg);}
   100% {-webkit-transform: rotate(0deg);}
 }

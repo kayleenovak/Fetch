@@ -12,6 +12,7 @@
   border-radius: 10px;
   background-color: white;
   font-family: Itim, Arial, sans-serif;
+  overflow: hidden;
 }
 
 p {
@@ -21,4 +22,23 @@ p {
 .top-p {
   margin-top: 12px;
   font-size: 2rem;
+}
+
+.expanded-description {
+  height: 53%;
+
+}
+
+a {
+  display: block;
+}
+
+.rescue-name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: tomato;
+}
+
+.rescue-info {
+  font-size: 1.5rem;
 }
