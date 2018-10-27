@@ -10,7 +10,7 @@ toggleModal = (event) => {
 }
   render() {
     return (
-      <div className='display-none'>
+      <div>
         <div className='sidebar breed-sb'>
           <div className='caret-wrapper' onClick={this.toggleModal}>
             <p className='caret'>Breed</p>

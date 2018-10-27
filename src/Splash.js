@@ -8,24 +8,30 @@ export default class Splash extends Component {
   displayMainPage = (event) => {
     event.preventDefault();
     let splashPage = document.querySelector('.splash')
-    let displayNone = document.querySelectorAll('.display-none')
+    let fetchDogs = document.querySelector('.fetch-dogs-btn')
+    let cardContainer = document.querySelector('.card-container-selector')
     splashPage.classList.remove('splash')
     splashPage.classList.add('display-none')
-    displayNone.forEach(element => {
-      element.classList.remove('displayNone')
-      element.classList.add('display-block')
-    })
+    cardContainer.classList.remove('display-none')
+    cardContainer.classList.add('card-container')
+    console.log(event.target)
+    if (event.target === fetchDogs) {
+      this.props.filterDogs(event) 
+    } else if (event.target === document.querySelector('.show-all-dogs-btn')) {
+      this.props.alldogs()
+    }
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className="splash">
         <h1 className='splash-title'>Fetch <i className="fas fa-dog"></i> </h1>
         <form>
             <div className="switch">
-              <input className='radios' type="radio" name="choose1" id='male' value="Male" />
-              <input className='radios' type="radio" name="choose1" value="both" defaultChecked />
-              <input className='radios' type="radio" name="choose1" value="Female" />
+              <input className='radios' type="radio" name="choose1" id='Male' value="Male" />
+              <input className='radios' type="radio" name="choose1" id='Male Female' value="both" defaultChecked />
+              <input className='radios' type="radio" name="choose1" id='Female' value="Female" />
             </div>
           </form>
           <form>
@@ -37,13 +43,13 @@ export default class Splash extends Component {
           </form>
           <form>
             <div className="switch">
-              <input className='radios' type="radio" name="choose3" value="Big" />
-              <input className='radios' type="radio" name="choose3" value="both" defaultChecked />
-              <input className='radios' type="radio" name="choose3" value="Small" />
+              <input className='radios' type="radio" name="choose3" id='Large' value="Large" />
+              <input className='radios' type="radio" name="choose3" id='Medium' value="Medium" />
+              <input className='radios' type="radio" name="choose3" id='Large Medium Small' value="both" defaultChecked />
+              <input className='radios' type="radio" name="choose3" id='Small' value="Small" />
             </div>
-          <button className='fetch-dogs-btn'>Fetch Dogs</button>
+          <button className='fetch-dogs-btn' onClick={ this.displayMainPage }>Fetch Dogs</button>
         </form>
-        <button onClick={this.displayMainPage} className='show-all-dogs-btn'>Show all dogs</button>
       </div>
     )
   }

@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  /*background-color: #11c4d3;*/
-
+  position: relative;
+  z-index: 0;
 }
 
 .App-logo {

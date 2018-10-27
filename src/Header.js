@@ -5,7 +5,7 @@ import './App.css';
 class Header extends Component {
   render() {
     return (
-      <header className='display-none'>
+      <header>
         <h1 className='title'>
           Fetch <i className="fas fa-dog"></i>
         </h1>
