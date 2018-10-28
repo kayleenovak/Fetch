@@ -18,8 +18,8 @@ export default class App extends Component {
       checkedBoxes: [],
       filteredDogs: [],
     };
-    this.filterDogs = this.filterDogs.bind(this);
-    this.allDogs = this.allDogs.bind(this)
+    // this.filterDogs = this.filterDogs.bind(this);
+    // this.allDogs = this.allDogs.bind(this)
   }
 
   componentDidMount = () => {
@@ -99,7 +99,8 @@ export default class App extends Component {
         <Header />
         <Filter />
         <Search searchFilter={ this.searchFilter } resetDogs={this.resetDogs} />
-        <CardContainer dogs={ this.state.filteredDogs } adoptableDogs={ this.state.adoptableDogs} allDogs = { this.allDogs }/>
+        <CardContainer dogs={ this.state.filteredDogs } adoptableDogs={ this.state.adoptableDogs} allDogs = { this.allDogs } 
+          rescues={this.state.rescues}/>
         <Footer />
       </div>
     );
