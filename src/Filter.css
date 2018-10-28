@@ -24,6 +24,14 @@
   top: 500px;
 }
 
+.age-sb {
+  top: 725px;
+}
+
+.house-trained-sb {
+  top: 900px;
+}
+
 .caret {
   width: fill;
   border-radius: 5%;
@@ -48,7 +56,7 @@
 }
 
 .toggled-modal {
-  height: 172px;
+  height: 125px;
   left: 0;
   z-index: 0;
   /*transform: rotate(180deg);*/

@@ -14,7 +14,6 @@ export default class Splash extends Component {
     splashPage.classList.add('display-none')
     cardContainer.classList.remove('display-none')
     cardContainer.classList.add('card-container')
-    console.log(event.target)
     if (event.target === fetchDogs) {
       this.props.filterDogs(event) 
     } else if (event.target === document.querySelector('.show-all-dogs-btn')) {
