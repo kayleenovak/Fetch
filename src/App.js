@@ -17,6 +17,7 @@ export default class App extends Component {
       rescues: [],
       checkedBoxes: [],
       filteredDogs: [],
+      selectedBreed: []
     };
     // this.filterDogs = this.filterDogs.bind(this);
     // this.allDogs = this.allDogs.bind(this)
@@ -85,11 +86,27 @@ export default class App extends Component {
   }
 
   resetDogs = (event) => {
-    console.log('adoptable', this.state.adoptableDogs)
     let dogs = this.allDogs(this.state.adoptableDogs);
     this.setState({
       filteredDogs: dogs
     })
+  }
+
+  filterBreed = (event) => {
+    this.state.selectedBreed = [];
+    let breedNodes = document.querySelectorAll('#breed');
+    for (let i = 0; i< breedNodes.length; i++) {
+      if (breedNodes[i].selected === true) {
+      this.state.selectedBreed.push(breedNodes[i].value)
+      console.log(this.state.selectedBreed)
+      console.log(breedNodes[i].value)
+      }
+    }
+    let dogzzzz = this.allDogs(this.state.adoptableDogs)
+    let filterBreed = dogzzzz.filter(currentDog => {
+      return currentDog.breed === this.state.selectedBreed[0]
+    })
+    this.setState({filteredDogs: filterBreed})
   }
 
   render() {
@@ -97,7 +114,7 @@ export default class App extends Component {
       <div className="App">
         <Splash filterDogs={ this.filterDogs }/>
         <Header />
-        <Filter />
+        <Filter filterBreed= { this.filterBreed } adoptableDogs={ this.state.adoptableDogs } allDogs={ this.allDogs } />
         <Search searchFilter={ this.searchFilter } resetDogs={this.resetDogs} />
         <CardContainer dogs={ this.state.filteredDogs } adoptableDogs={ this.state.adoptableDogs} allDogs = { this.allDogs } 
           rescues={this.state.rescues}/>
