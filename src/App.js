@@ -109,12 +109,66 @@ export default class App extends Component {
     this.setState({filteredDogs: filterBreed})
   }
 
+  filterGender = (event) => {
+    let dogs = this.allDogs(this.state.adoptableDogs);
+    let filteredDogs = dogs.filter((currentDog) => {
+      return currentDog.gender === event.target.innerText
+    });
+    this.setState({
+      filteredDogs: filteredDogs
+    })
+  }
+
+  filterSize = (event) => {
+    let dogs = this.allDogs(this.state.adoptableDogs);
+    let filteredDogs = dogs.filter((currentDog) => {
+      return currentDog.size === event.target.innerText
+    });
+    this.setState({
+      filteredDogs: filteredDogs
+    })
+  }
+
+  filterAge = (event) => {
+    let dogAge = event.target.innerText;
+    this.setState({
+      filteredDogs: this.state.adoptableDogs[dogAge]
+    })
+  }
+
+  filterPure = (event) => {
+    let dogs = this.allDogs(this.state.adoptableDogs);
+    let filteredDogs = dogs.filter((currentDog) => {
+      if (event.target.innerText === 'Purebred') {
+        return currentDog.mix_breed === false
+      } else {
+        return currentDog.mix_breed
+      }
+    })
+    this.setState({
+      filteredDogs: filteredDogs
+    })
+  }
+
+  filterTrained = (event) => {
+    let dogs = this.allDogs(this.state.adoptableDogs);
+    let filteredDogs = dogs.filter((currentDog) => {
+      return currentDog.house_trained
+    })
+    this.setState({
+      filteredDogs: filteredDogs
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <Splash filterDogs={ this.filterDogs }/>
         <Header />
-        <Filter filterBreed= { this.filterBreed } adoptableDogs={ this.state.adoptableDogs } allDogs={ this.allDogs } />
+        <Filter filterBreed= { this.filterBreed } adoptableDogs={ this.state.adoptableDogs } allDogs={ this.allDogs } filterGender={this.filterGender} filterSize={this.filterSize} 
+        filterAge={this.filterAge} 
+        filterPure={this.filterPure}
+        filterTrained={this.filterTrained} />
         <Search searchFilter={ this.searchFilter } resetDogs={this.resetDogs} />
         <CardContainer dogs={ this.state.filteredDogs } adoptableDogs={ this.state.adoptableDogs} allDogs = { this.allDogs } 
           rescues={this.state.rescues}/>

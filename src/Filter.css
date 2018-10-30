@@ -7,60 +7,85 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-left: none;
-  background-color: white;
+  background-color: lightgrey;
   transition: 1s;
-
-  position: absolute;
+  position: fixed;
   left: -220px;
+  z-index: 10;
 }
 
 .breed-sb {
-  top: 50px;
+  top: 115px;
 }
 .gender-sb {
-  top: 275px;
+  top: 243px;
 }
 .size-sb {
-  top: 500px;
+  top: 371px;
 }
 
 .age-sb {
-  top: 725px;
+  top: 500px;
 }
 
-.house-trained-sb {
-  top: 900px;
+.other-sb {
+  top: 630px;
 }
 
-.caret {
-  width: fill;
-  border-radius: 5%;
-  border: solid 2px black; 
-  display: block;
-  margin: 8px -13px;
-  background-color: lime;
-}
-
-.caret-wrapper {
-  float: right;
-  width: 30px;
-  height: 30px;
-  /*border-radius: 50%;*/
-  /*border: solid 2px #000; */
-  transition: .7s;
+.other-btn {
+  font-size: 0.9rem;
+  padding: 0 1px 0 1px;
 }
 
 .caret-wrapper:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
 .toggled-modal {
-  height: 125px;
+  height: 80px;
   left: 0;
-  z-index: 0;
-  /*transform: rotate(180deg);*/
+  z-index: 1;
 }
+
+.caret {
+  box-shadow: gray 2px 2px 4px;
+  height: 30px;
+  position: relative;
+  top: -1px;
+  margin: 8px;
+  width: 55px;
+  float: right;
+  position: relative;
+  right: -17px;
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid #00c7d6;
+  font-family: Itim, Arial, Sans-Serif;
+  font-size: 0.9rem;
+  transition: color .4s linear;
+  transition: background-color .4s linear;
+  transition: transform .4s linear;
+}
+
+.caret:hover {
+  background-color: #00c7d6;
+  color: white;
+  border-color: #00ff00;
+  cursor: pointer;
+  transform: scale(1.15);
+  transition: .4s;
+}
+
+.caret:focus {
+  outline: none;
+}
+
+.caret:active {
+  background-color: #00ff00;
+  transition: 0s;
+}
+
 
 
 
