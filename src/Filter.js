@@ -11,6 +11,7 @@ export default class Filter extends Component {
     this.state = {
       dogArray: null,
       uniqueBreedsArray: [],
+
     }
   }
 
@@ -31,24 +32,7 @@ export default class Filter extends Component {
   }
 
 
-
-    // event.preventDefault()
-    // this.getCheckedRadios()
-    // let dogs = this.allDogs(this.state.adoptableDogs);
-    // let sizeCheckbox = this.state.checkedBoxes[2].id.toLowerCase()
-    // let filteredDogs = dogs.filter(dog => {
-    //   let dogSize = dog.size.toLowerCase()
-    //   if(this.state.checkedBoxes[0].id.includes(dog.gender) && sizeCheckbox.includes(dogSize)) {
-    //     return dog
-    //   }
-    // })
-    // this.setState(
-    //   {
-    //     filteredDogs: filteredDogs
-    //   } 
-    // )
   
-
   render() {
     return (
       <div>
@@ -59,7 +43,6 @@ export default class Filter extends Component {
           <select>
             {
               this.state.uniqueBreedsArray.map((currentBreed) => {
-                console.log('current breed:', currentBreed);
                 return <Option currentBreed={currentBreed} />
               })
             }
@@ -70,25 +53,33 @@ export default class Filter extends Component {
           <div className='caret-wrapper' onClick={this.toggleModal}>
             <p className='caret'>Gender</p>
           </div>
-          <p className='modal-body'> THIS IS WHERE CHECKBOXES AND RADIO BUTTONS SHOULD GO </p>
+          <button className='gender-btn modal-btn' onClick={this.props.filterGender}>Male</button>
+          <button className='gender-btn modal-btn' onClick={this.props.filterGender}>Female</button>
         </div>
         <div className='sidebar size-sb'>
           <div className='caret-wrapper' onClick={this.toggleModal}>
             <p className='caret'>Size</p>
           </div>
-          <p className='modal-body'> THIS IS WHERE CHECKBOXES AND RADIO BUTTONS SHOULD GO </p>
+          <button className='size-btn modal-btn' onClick={this.props.filterSize}>Small</button>
+          <button className='size-btn modal-btn' onClick={this.props.filterSize}>Medium</button>
+          <button className='size-btn modal-btn' onClick={this.props.filterSize}>Large</button>
         </div>
         <div className='sidebar age-sb'>
           <div className='caret-wrapper' onClick={this.toggleModal}>
-            <p className='caret'>Size</p>
+            <p className='caret'>Age</p>
           </div>
-          <p className='modal-body'> THIS IS WHERE CHECKBOXES AND RADIO BUTTONS SHOULD GO </p>
+          <button className='age-btn modal-btn' onClick={this.props.filterAge}>puppy</button>
+          <button className='age-btn modal-btn' onClick={this.props.filterAge}>young</button>
+          <button className='age-btn modal-btn' onClick={this.props.filterAge}>adult</button>
+          <button className='age-btn modal-btn' onClick={this.props.filterAge}>senior</button>        
         </div>
-        <div className='sidebar house-trained-sb'>
+        <div className='sidebar other-sb'>
           <div className='caret-wrapper' onClick={this.toggleModal}>
-            <p className='caret'>Size</p>
+            <p className='caret'>Other</p>
           </div>
-          <p className='modal-body'> THIS IS WHERE CHECKBOXES AND RADIO BUTTONS SHOULD GO </p>
+          <button className='other-btn modal-btn' onClick={this.props.filterPure}>Mixed Breed</button>
+          <button className='other-btn modal-btn' onClick={this.props.filterPure}>Purebred</button>
+          <button className='other-btn modal-btn' onClick={this.props.filterTrained}>House Trained</button>      
         </div>
       </div>
     )
