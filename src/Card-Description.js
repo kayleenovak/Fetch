@@ -40,7 +40,7 @@ export default class CardDescription extends Component {
           (
         <div> 
           <p className="top-p">{this.props.description.name}</p>
-          <p>{this.props.description.breed} {this.props.description.mix ? null : 'Mix' }</p>
+          <p>{this.props.description.breed} {this.props.description.mix_breed ? null : 'Mix' }</p>
           <p>{typeof(this.props.description.age) === 'string' ? this.props.description.age : this.props.description.age + ' yrs'}</p>
           <p>{this.props.description.gender}</p>
           <p>Size: {this.props.description.size}</p>
