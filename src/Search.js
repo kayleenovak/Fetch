@@ -29,20 +29,36 @@ export default class Search extends Component {
   autoComplete = (event) => {
     let prefix = event.target.value
     let suggestions = this.state.prefixTrie.suggest(prefix)
+    if (suggestions.length > 39) {
+      this.setState({
+        suggestions: []
+      })  
+    } else {
+      this.setState({
+        suggestions: suggestions
+      })
+    }  
+  }
+
+  autoPopulateSearch = (event) => {
+    let name = event.target.innerText
+    let searchBar = document.querySelector('.search-bar')
+    searchBar.value = name
     this.setState({
-      suggestions: suggestions
-    })  
+        suggestions: []
+      })  
   }
 
   render() {
     return (
       <div className="search-div">
         <input placeholder="Search by name..." type='search' className='search-bar' onClick={ this.setAutoCompleteData } onChange={ this.autoComplete }/>
+        <div className='autocomplete-section'>
         { this.state.suggestions.map(suggestion => {
-          return <Suggestion suggestion={ suggestion } />
+          return <Suggestion suggestion={ suggestion } autoPopulateSearch={ this.autoPopulateSearch }/>
         })
-
         }
+        </div>
         <button onClick={ this.props.searchFilter }>Search</button>
         <button onClick={ this.props.resetDogs }>Show All Dogs</button>
       </div>

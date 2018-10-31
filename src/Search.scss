@@ -7,6 +7,10 @@ input[type=search]{
    appearance: none;
 }
 
+.search-div {
+  position: relative;
+}
+
 .search-bar {
   border-color: $color-blue;
   border-radius: 10px;
@@ -18,11 +22,25 @@ input[type=search]{
   text-shadow: gray 1px 1px 1px;
   transition: transform .4s linear;
   width: 40%;
+  z-index: 1000000;
 
   &:focus {
     outline: none;
     transform: scale(1.1);
   }
+}
+
+.autocomplete-section {
+  background-color: white;
+  position: absolute;
+  top: 49px;
+  left: 340px;
+  width: 505px;
+  z-index: 100;
+  border-radius: 0 0 5px 5px;
+  border-top: none;
+  border: 1px solid grey;
+  border-top: none;
 }
 
 button {
