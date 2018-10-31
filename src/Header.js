@@ -11,7 +11,7 @@ class Header extends Component {
         </h1>
 
       </header>
-    )
+    );
   }
 }
 

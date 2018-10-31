@@ -3,9 +3,9 @@ import './main.scss';
 
 export default class Suggestion extends Component {
 
-render() {
-  return(
-    <div>{this.props.suggestion}</div>
-    )
+  render() {
+    return (
+      <div>{this.props.suggestion}</div>
+    );
   }
 }
