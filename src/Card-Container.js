@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import './App.scss';
-
-import cardContainerStyle from './Card-Container.css';
+import './main.scss';
 
 
 export default class CardContainer extends Component {
