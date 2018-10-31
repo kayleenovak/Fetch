@@ -1,28 +1,15 @@
+@import 'variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Itim');
 
-
-
 .card-desc {
-  position: relative;
-  top: -11px;
-  left: -5px;
-  right: 4px;
-  height: 50%;
-  width: 104.45%;
   background-color: white;
-  font-family: Itim, Arial, sans-serif;
+  font-family: $font-main;
+  height: 50%;
   overflow: hidden;
-}
-
-p {
-  margin: 5px;
-  font-size: 0.9rem;
-}
-
-.top-p {
-  margin: 6px 0 8px 0;
-  font-size: 2rem;
-  color: #402D83;
+  position: relative;
+  right: 5px;
+  top: -11px;
+  width: 104.45%;
 }
 
 .expanded-description {
@@ -30,20 +17,25 @@ p {
   width: 101.35%;
 }
 
+.top-p {
+  margin: 6px 0 8px 0;
+  font-size: 2rem;
+  color: $color-purple;
+}
+
+p {
+  font-size: 0.9rem;
+  margin: 5px;
+}
+
 a {
   display: block;
 }
 
-.rescue-name {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: tomato;
-}
-
 .rescue-info {
+  border-bottom: 1px solid $color-grey;
   font-size: 1.5rem;
   margin-left: 10px;
-  border-bottom: 1px solid grey;
 }
 
 .contact-table {
@@ -52,8 +44,8 @@ a {
 }
 
 .table-content {
-  text-align: left;
   height: 35px;
+  text-align: left;
 }
 
 .left-column {
