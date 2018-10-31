@@ -34,14 +34,7 @@ export default class Splash extends Component {
             </div>
           </form>
           <form>
-            <div className="switch">
-              <input className='radios' type="radio" name="choose2" value="Puppy" />
-              <input className='radios' type="radio" name="choose2" value="both" defaultChecked />
-              <input className='radios' type="radio" name="choose2" value="Adult" />
-            </div>
-          </form>
-          <form>
-            <div className="switch">
+            <div className="switch low-switch">
               <input className='radios' type="radio" name="choose3" id='Large' value="Large" />
               <input className='radios' type="radio" name="choose3" id='Medium' value="Medium" />
               <input className='radios' type="radio" name="choose3" id='Large Medium Small' value="both" defaultChecked />
