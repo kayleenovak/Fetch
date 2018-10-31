@@ -22,6 +22,7 @@ p {
 .top-p {
   margin: 6px 0 8px 0;
   font-size: 2rem;
+  color: #402D83;
 }
 
 .expanded-description {
@@ -41,4 +42,20 @@ a {
 
 .rescue-info {
   font-size: 1.5rem;
+  margin-left: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.contact-table {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.table-content {
+  text-align: left;
+  height: 35px;
+}
+
+.left-column {
+  width: 50px;
 }

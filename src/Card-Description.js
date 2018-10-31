@@ -40,7 +40,7 @@ export default class CardDescription extends Component {
           (
         <div> 
           <p className="top-p">{this.props.description.name}</p>
-          <p>{this.props.description.breed} {this.props.description.mix ? null : 'Mix' }</p>
+          <p>{this.props.description.breed} {this.props.description.mix_breed ? null : 'Mix' }</p>
           <p>{typeof(this.props.description.age) === 'string' ? this.props.description.age : this.props.description.age + ' yrs'}</p>
           <p>{this.props.description.gender}</p>
           <p>Size: {this.props.description.size}</p>
@@ -51,12 +51,27 @@ export default class CardDescription extends Component {
           <button className='card-desc-btn' onClick={this.toggleRescue}>Rescue Me</button>
         </div>
           ) : 
-        (<div>
-          <p className="top-p">Please contact <span className='rescue-name'>{this.state.currentRescue[0].name}</span> to adopt {this.props.description.name}</p>
-          <p className='rescue-info' >{this.state.currentRescue[0].Phone}</p>
-          <p className='rescue-info' >{this.state.currentRescue[0].Location}</p>
-          <a className='rescue-info'  href='mailto:/{this.state.currentRescue[0].Email}/'>{this.state.currentRescue[0].Email}</a>
-          <a className='rescue-info'  href={this.state.currentRescue[0].Webiste}>{this.state.currentRescue[0].Webiste}</a>
+        (<div className='contact-rescue'>
+          <p>Please contact the rescue below for adoption application and information:</p>
+          <p className="top-p">{this.state.currentRescue[0].name}</p>
+          <table className='contact-table'>
+            <tr>
+              <td className='table-content left-column'><i class="fas fa-phone"></i></td>
+              <td className='rescue-info table-content'>{this.state.currentRescue[0].Phone}</td>
+            </tr>
+            <tr>
+              <td className='table-content left-column'><i class="fas fa-map-marker-alt"></i></td>
+              <td className='table-content rescue-info'>{this.state.currentRescue[0].Location}</td>
+            </tr>
+            <tr>
+              <td className='table-content left-column'><i class="fas fa-envelope"></i></td>
+              <td className='rescue-info table-content'><a className='rescue-info' href='mailto:/{this.state.currentRescue[0].Email}/'>{this.state.currentRescue[0].Email}</a></td>
+            </tr>
+            <tr>
+              <td className='table-content left-column'><i class="fas fa-globe-americas"></i></td>
+              <td className='rescue-info table-content'><a className='rescue-info'  href={this.state.currentRescue[0].Webiste}>{this.state.currentRescue[0].Webiste}</a></td>
+            </tr>
+          </table>
         </div>)
         }
     </div>
