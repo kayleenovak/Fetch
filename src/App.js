@@ -15,6 +15,7 @@ export default class App extends Component {
     this.state = {
       adoptableDogs: [], 
       rescues: [],
+      unfilteredDogs: [],
       checkedBoxes: [],
       filteredDogs: [],
       selectedBreed: []
@@ -35,7 +36,7 @@ export default class App extends Component {
        .then(rescues => this.setState({
          rescues: rescues.rescues
        }))
-       .catch(error => console.log(error))
+       .catch(error => console.log(error));
    }
 
   getCheckedRadios = () => {
@@ -48,21 +49,19 @@ export default class App extends Component {
   }
 
   allDogs = (dogs) => {
-    let allOfTheDogs = Object.keys(dogs).reduce((acc, key) => {
+    let allOfTheDogs = Object.keys(dogs).forEach(key => {
       dogs[key].forEach((dog, index) => {
-        acc.push(dog)
+        this.state.unfilteredDogs.push(dog)
       })
-      return acc
-    }, [])
-    return allOfTheDogs
+    })
   }
 
   filterDogs = (event) => {
     event.preventDefault()
+    this.allDogs(this.state.adoptableDogs)
     this.getCheckedRadios()
-    let dogs = this.allDogs(this.state.adoptableDogs);
     let sizeCheckbox = this.state.checkedBoxes[2].id.toLowerCase()
-    let filteredDogs = dogs.filter(dog => {
+    let filteredDogs = this.state.unfilteredDogs.filter(dog => {
       let dogSize = dog.size.toLowerCase()
       if(this.state.checkedBoxes[0].id.includes(dog.gender) && sizeCheckbox.includes(dogSize)) {
         return dog
@@ -76,8 +75,7 @@ export default class App extends Component {
   }
 
   searchFilter = (event) => {
-    let dogs = this.allDogs(this.state.adoptableDogs);
-    let filteredDogs = dogs.filter((currentDog) => {
+    let filteredDogs = this.state.unfilteredDogs.filter((currentDog) => {
       return currentDog.name.toLowerCase() === document.querySelector('.search-bar').value.toLowerCase()
     });
     this.setState({
@@ -86,9 +84,8 @@ export default class App extends Component {
   }
 
   resetDogs = (event) => {
-    let dogs = this.allDogs(this.state.adoptableDogs);
     this.setState({
-      filteredDogs: dogs
+      filteredDogs: this.state.unfilteredDogs
     })
   }
 
@@ -98,20 +95,16 @@ export default class App extends Component {
     for (let i = 0; i< breedNodes.length; i++) {
       if (breedNodes[i].selected === true) {
       this.state.selectedBreed.push(breedNodes[i].value)
-      console.log(this.state.selectedBreed)
-      console.log(breedNodes[i].value)
       }
     }
-    let dogzzzz = this.allDogs(this.state.adoptableDogs)
-    let filterBreed = dogzzzz.filter(currentDog => {
+    let filterBreed = this.state.filteredDogs.filter(currentDog => {
       return currentDog.breed === this.state.selectedBreed[0]
     })
     this.setState({filteredDogs: filterBreed})
   }
 
   filterGender = (event) => {
-    let dogs = this.allDogs(this.state.adoptableDogs);
-    let filteredDogs = dogs.filter((currentDog) => {
+    let filteredDogs = this.state.filteredDogs.filter((currentDog) => {
       return currentDog.gender === event.target.innerText
     });
     this.setState({
@@ -120,8 +113,7 @@ export default class App extends Component {
   }
 
   filterSize = (event) => {
-    let dogs = this.allDogs(this.state.adoptableDogs);
-    let filteredDogs = dogs.filter((currentDog) => {
+    let filteredDogs = this.state.filteredDogs.filter((currentDog) => {
       return currentDog.size === event.target.innerText
     });
     this.setState({
@@ -131,14 +123,21 @@ export default class App extends Component {
 
   filterAge = (event) => {
     let dogAge = event.target.innerText;
+    let filteredDogs = this.state.filteredDogs.reduce((acc, filteredDog) => {
+      this.state.adoptableDogs[dogAge].forEach(dog => {
+        if (dog === filteredDog) {
+          acc.push(dog)
+        }
+      })
+      return acc
+      }, [])
     this.setState({
-      filteredDogs: this.state.adoptableDogs[dogAge]
+      filteredDogs: filteredDogs
     })
   }
 
   filterPure = (event) => {
-    let dogs = this.allDogs(this.state.adoptableDogs);
-    let filteredDogs = dogs.filter((currentDog) => {
+    let filteredDogs = this.state.filteredDogs.filter((currentDog) => {
       if (event.target.innerText === 'Purebred') {
         return currentDog.mix_breed === false
       } else {
@@ -151,8 +150,7 @@ export default class App extends Component {
   }
 
   filterTrained = (event) => {
-    let dogs = this.allDogs(this.state.adoptableDogs);
-    let filteredDogs = dogs.filter((currentDog) => {
+    let filteredDogs = this.state.filteredDogs.filter((currentDog) => {
       return currentDog.house_trained
     })
     this.setState({
@@ -165,7 +163,7 @@ export default class App extends Component {
       <div className="App">
         <Splash filterDogs={ this.filterDogs }/>
         <Header />
-        <Filter filterBreed= { this.filterBreed } adoptableDogs={ this.state.adoptableDogs } allDogs={ this.allDogs } filterGender={this.filterGender} filterSize={this.filterSize} 
+        <Filter filterBreed= { this.filterBreed } unfilteredDogs={ this.state.unfilteredDogs } filterGender={this.filterGender} filterSize={this.filterSize} 
         filterAge={this.filterAge} 
         filterPure={this.filterPure}
         filterTrained={this.filterTrained} />
