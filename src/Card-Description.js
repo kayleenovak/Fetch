@@ -12,15 +12,22 @@ export default class CardDescription extends Component {
 
   toggleRescue = (event) => {
     this.filterRescue();
-    this.setState({displayDescription: !this.state.displayDescription});
+    this.setState({
+      displayDescription: !this.state.displayDescription
+    });
   }
 
   filterRescue = () => {
     let matchedRescue = this.props.rescues.find((currentRescue) => {
       return this.props.description.rescue.toLowerCase() === currentRescue.name.toLowerCase()
     })
-    console.log('matchedRescue', matchedRescue);
     this.state.currentRescue.push(matchedRescue);
+  }
+
+  toggleDisplayRescue = () => {
+    this.setState({
+      displayDescription: !this.state.displayDescription
+    });
   }
 
 
@@ -40,10 +47,10 @@ export default class CardDescription extends Component {
           <p>{this.props.description.house_trained ? 'House Trained' : 'Not House Trained'}</p>
           <p>{this.props.description.vaccinations ? 'Vaccinated' : 'Not Vaccinated'}</p>
           <p>Spayed/Neutered: {this.props.description.spayed_neutered ? 'Yes' : 'No'}</p>
-          <button className='card-desc-btn' onClick={this.toggleRescue}>Rescue Me</button>
+          <button className='card-desc-btn' onClick={ this.toggleRescue }>Rescue Me</button>
         </div>
           ) : 
-        (<div className='contact-rescue'>
+        (<div className='contact-rescue' onClick={ this.toggleDisplayRescue }>
           <p>Please contact the rescue below for adoption application and information:</p>
           <p className="top-p">{this.state.currentRescue[0].name}</p>
           <table className='contact-table'>
