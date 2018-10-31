@@ -172,7 +172,7 @@ export default class App extends Component {
         <Search searchFilter={ this.searchFilter } resetDogs={this.resetDogs} />
         <CardContainer dogs={ this.state.filteredDogs } adoptableDogs={ this.state.adoptableDogs} allDogs = { this.allDogs } 
           rescues={this.state.rescues}/>
-        <Footer />
+        <Footer filteredDogs={this.state.filteredDogs} />
       </div>
     );
   }

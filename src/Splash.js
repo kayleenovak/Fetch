@@ -37,7 +37,7 @@ export default class Splash extends Component {
             <div className="switch low-switch">
               <input className='radios' type="radio" name="choose3" id='Large' value="Large" />
               <input className='radios' type="radio" name="choose3" id='Medium' value="Medium" />
-              <input className='radios' type="radio" name="choose3" id='Large Medium Small' value="both" defaultChecked />
+              <input className='radios' type="radio" name="choose3" id='Large Medium Small' value="All" defaultChecked />
               <input className='radios' type="radio" name="choose3" id='Small' value="Small" />
             </div>
           <button className='fetch-dogs-btn' onClick={ this.displayMainPage }>Fetch Dogs</button>
