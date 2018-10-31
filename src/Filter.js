@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import FilterStyle from './Filter.scss';
 import AppStyle from './App.scss';
 import Option from './Option.js';

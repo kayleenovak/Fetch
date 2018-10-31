@@ -7,3 +7,8 @@ $color-grey: grey;
 $color-lightgrey: lightgrey;
 $color-black: black;
 $font-main: Itim, Arial, sans-serif;
+
+@mixin image-overlay($percentage) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, black $percentage);
+}
+
