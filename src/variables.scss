@@ -3,10 +3,12 @@
 $color-purple: #865AB7;
 $color-blue: #00c7d6;
 $color-green: lime;
-$font-main: Itim, Arial, sans-serif;
-
 $color-grey: grey;
+$color-lightgrey: lightgrey;
+$color-black: black;
+$font-main: Itim, Arial, sans-serif;
 
 @mixin image-overlay($percentage) {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, black $percentage);
 }
+

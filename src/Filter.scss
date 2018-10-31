@@ -1,0 +1,84 @@
+@import 'variables.scss';
+
+.sidebar {
+  background-color: $color-lightgrey;
+  border-bottom-right-radius: 20px;
+  border-left: none;
+  border-top-right-radius: 20px;
+  border: 2px solid $color-black;
+  height: 35px;
+  left: -220px;
+  overflow: hidden;
+  padding: 1rem;
+  position: fixed;
+  transition: 1s;
+  width: 255px;
+  z-index: 10;
+}
+
+.breed-sb {
+  top: 100px;
+}
+.gender-sb {
+  top: 228px;
+}
+.size-sb {
+  top: 356px;
+}
+
+.age-sb {
+  top: 485px;
+}
+
+.other-sb {
+  top: 610px;
+}
+
+.other-btn {
+  font-size: 0.9rem;
+  padding: 0 1px 0 1px;
+}
+
+.caret-wrapper:hover {
+  cursor: pointer;
+}
+
+.toggled-modal {
+  height: 80px;
+  left: 0;
+  z-index: 1;
+}
+
+.caret {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid $color-blue;
+  box-shadow: gray 2px 2px 4px;
+  float: right;
+  font-family: font-main;
+  font-size: 0.9rem;
+  height: 30px;
+  margin: 8px;
+  position: relative;
+  right: -17px;
+  top: -7px;
+  width: 55px;
+
+  &:hover {
+    background-color: $color-blue;
+    border-color: $color-green;
+    color: white;
+    cursor: pointer;
+    transition: .4s;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+
+
+
+

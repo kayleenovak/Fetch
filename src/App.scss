@@ -1,6 +1,8 @@
+@import 'variables.scss';
+
 .App {
-  position: relative;
   text-align: center;
+  position: relative;
   z-index: 0;
 }
 
@@ -10,14 +12,14 @@
 }
 
 .App-header {
-  align-items: center;
-  background-color: #282c34;
-  color: white;
+  background-color: $color-blue;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .display-none {
