@@ -73,6 +73,10 @@
   top: -7px;
 }
 
+.icon:hover {
+  cursor: pointer;
+}
+
 @-webkit-keyframes wiggle {
   0% {-webkit-transform: rotate(1deg);}
   25% {-webkit-transform: rotate(-.5deg);}
