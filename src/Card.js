@@ -11,7 +11,8 @@ export default class Card extends Component {
   toggleInfo = (event) => {
     this.setState({showInfo: !this.state.showInfo});
     event.target.previousSibling.classList.toggle('expanded-description');
-    event.target.previousSibling.previousSibling.classList.toggle('expanded-img');
+    event.target.previousSibling.previousSibling.childNodes[0].classList.toggle('expanded-img');
+    event.target.previousSibling.previousSibling.classList.toggle('img-overlay');
     event.target.parentElement.classList.toggle('expanded-card');
   }
 
@@ -22,7 +23,9 @@ export default class Card extends Component {
 
   return (
     <div className="card">
-      <img src={this.props.dog.img} className="dog-img" />
+      <div className="img-overlay">
+        <img src={this.props.dog.img} className="dog-img" />
+      </div>
       <CardDescription description={this.props.dog} toggleInfo={this.toggleInfo} 
         rescues={this.props.rescues} />
       <div onClick={this.toggleInfo} className= 'icon'>

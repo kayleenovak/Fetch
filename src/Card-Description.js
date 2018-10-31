@@ -40,14 +40,14 @@ export default class CardDescription extends Component {
           (
         <div> 
           <p className="top-p">{this.props.description.name}</p>
-          <p>Age: {this.props.description.age}</p>
-          <p>Sex: {this.props.description.gender}</p>
-          <p>Breed: {this.props.description.breed}</p>
-          <p>Breed: {this.props.description.size}</p>
-          <p>Weight: {this.props.description.weight}</p>
-          <p>House trained: {this.props.description.house_trained ? 'Yes' : 'No'}</p>
-          <p>Vaccinated: {this.props.description.vaccinations ? 'Yes' : 'No'}</p>
-          <p>spayed/Spayed/Neutered: {this.props.description.spayed_neutered ? 'Yes' : 'No'}</p>
+          <p>{this.props.description.breed} {this.props.description.mix ? null : 'Mix' }</p>
+          <p>{typeof(this.props.description.age) === 'string' ? this.props.description.age : this.props.description.age + ' yrs'}</p>
+          <p>{this.props.description.gender}</p>
+          <p>Size: {this.props.description.size}</p>
+          <p>{this.props.description.weight} lbs</p>
+          <p>{this.props.description.house_trained ? 'House Trained' : 'Not House Trained'}</p>
+          <p>{this.props.description.vaccinations ? 'Vaccinated' : 'Not Vaccinated'}</p>
+          <p>Spayed/Neutered: {this.props.description.spayed_neutered ? 'Yes' : 'No'}</p>
           <button className='card-desc-btn' onClick={this.toggleRescue}>Rescue Me</button>
         </div>
           ) : 
