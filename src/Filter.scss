@@ -55,7 +55,7 @@
   border: 2px solid $color-blue;
   box-shadow: gray 2px 2px 4px;
   float: right;
-  font-family: font-main;
+  font-family: $font-main;
   font-size: 0.9rem;
   height: 30px;
   margin: 8px;
@@ -76,9 +76,3 @@
     outline: none;
   }
 }
-
-
-
-
-
-
