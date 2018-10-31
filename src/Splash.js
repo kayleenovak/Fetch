@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './Splash.scss'
-import './App.scss';
+import './main.scss';
 
 
 export default class Splash extends Component {
