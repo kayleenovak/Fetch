@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import SearchStyle from './Search.scss';
 import Trie from '@kaynovak/autocomplete';
 import Suggestion from './Suggestion.js'
