@@ -49,12 +49,11 @@ export default class App extends Component {
   }
 
   allDogs = (dogs) => {
-    let allOfTheDogs = Object.keys(dogs).reduce((acc, key) => {
+    let allOfTheDogs = Object.keys(dogs).forEach(key => {
       dogs[key].forEach((dog, index) => {
         this.state.unfilteredDogs.push(dog)
       })
-      return acc
-    }, [])
+    })
   }
 
   filterDogs = (event) => {
