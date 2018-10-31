@@ -1,0 +1,12 @@
+@import 'variables.scss';
+
+.suggestion {
+  font-size: 1rem;
+  margin: 10px;
+
+  &:hover {
+  background: $color-blue;
+  opacity: .8;
+  }
+}
+
