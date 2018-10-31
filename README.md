@@ -1,10 +1,10 @@
 Fetch is a dog adoption app made with React.JS
 
 ## Install
-clone the repo down (git clone https://github.com/kayleenovak/Fetch.git)
-install the required packages (npm install)
-run the local server (npm start)
-enjoy!
+    - clone the repo down (git clone https://github.com/kayleenovak/Fetch.git)
+    - install the required packages (npm install)
+    - run the local server (npm start)
+    - enjoy!
 
 ## Screenshots
 # Splash Page
@@ -22,3 +22,5 @@ enjoy!
 <img width="1440" alt="screen shot 2018-10-31 at 3 20 39 pm" src="https://user-images.githubusercontent.com/40470660/47820094-196cfe00-dd22-11e8-981e-387885cc602f.png">
 
 <img width="1440" alt="screen shot 2018-10-31 at 3 21 36 pm" src="https://user-images.githubusercontent.com/40470660/47820083-0ce8a580-dd22-11e8-9b7e-568677a88644.png">
+
+<img width="1440" alt="screen shot 2018-10-31 at 3 32 55 pm" src="https://user-images.githubusercontent.com/40470660/47820174-5a651280-dd22-11e8-97d8-f53fd3680385.png">
