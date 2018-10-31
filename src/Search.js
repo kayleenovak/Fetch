@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchStyle from './Search.css';
 import Trie from '@kaynovak/autocomplete';
+import Suggestion from './Suggestion.js'
 
 export default class Search extends Component {
   constructor() {
@@ -36,13 +37,20 @@ export default class Search extends Component {
   autoComplete = (event) => {
     let prefix = event.target.value
     let suggestions = this.state.prefixTrie.suggest(prefix)
-    console.log(suggestions)
+    this.setState({
+      suggestions: suggestions
+    })  
   }
 
   render() {
     return (
       <div className="search-div">
         <input placeholder="Search by name..." type='search' className='search-bar' onClick={ this.setAutoCompleteData } onChange={ this.autoComplete }/>
+        { this.state.suggestions.map(suggestion => {
+          return <Suggestion suggestion={ suggestion } />
+        })
+
+        }
         <button onClick={ this.props.searchFilter }>Search</button>
         <button onClick={ this.props.resetDogs }>Show All Dogs</button>
       </div>
