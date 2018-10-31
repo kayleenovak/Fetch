@@ -29,7 +29,7 @@ export default class Search extends Component {
   autoComplete = (event) => {
     let prefix = event.target.value
     let suggestions = this.state.prefixTrie.suggest(prefix)
-    if (suggestions.length > 39) {
+    if (suggestions.length > 39 || suggestions.length < 1) {
       this.setState({
         suggestions: []
       })  
