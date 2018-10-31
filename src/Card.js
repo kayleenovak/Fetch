@@ -5,7 +5,9 @@ import './main.scss';
 export default class Card extends Component {
   constructor() {
     super();
-    this.state = {showInfo: false};
+    this.state = {
+      showInfo: false,
+    }
   }
 
   toggleInfo = (event) => {
