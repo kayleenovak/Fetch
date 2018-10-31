@@ -68,7 +68,7 @@ export default class CardDescription extends Component {
               <td className='rescue-info table-content'><a className='rescue-info' href='mailto:/{this.state.currentRescue[0].Email}/'>{this.state.currentRescue[0].Email}</a></td>
             </tr>
             <tr>
-              <td className='table-content left-column'></td>
+              <td className='table-content left-column'><i class="fas fa-globe-americas"></i></td>
               <td className='rescue-info table-content'><a className='rescue-info'  href={this.state.currentRescue[0].Webiste}>{this.state.currentRescue[0].Webiste}</a></td>
             </tr>
           </table>
