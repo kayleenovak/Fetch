@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
-import Footer from './Footer';
 import Splash from './Splash';
 import Filter from './Filter';
 import Search from './Search';
@@ -19,8 +18,6 @@ export default class App extends Component {
       filteredDogs: [],
       selectedBreed: []
     };
-    // this.filterDogs = this.filterDogs.bind(this);
-    // this.allDogs = this.allDogs.bind(this)
   }
 
   componentDidMount = () => {
@@ -172,7 +169,6 @@ export default class App extends Component {
         <Search searchFilter={ this.searchFilter } resetDogs={this.resetDogs} />
         <CardContainer dogs={ this.state.filteredDogs } adoptableDogs={ this.state.adoptableDogs} allDogs = { this.allDogs } 
           rescues={this.state.rescues}/>
-        <Footer />
       </div>
     );
   }

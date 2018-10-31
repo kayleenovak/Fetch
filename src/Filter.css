@@ -1,16 +1,16 @@
 .sidebar {
-  overflow: hidden;
-  width: 255px;
-  height: 35px;
-  border: 2px solid #000;
-  padding: 1rem;
-  border-top-right-radius: 20px;
+  background-color: lightgrey;
   border-bottom-right-radius: 20px;
   border-left: none;
-  background-color: lightgrey;
-  transition: 1s;
-  position: fixed;
+  border-top-right-radius: 20px;
+  border: 2px solid #000;
+  height: 70px;
   left: -220px;
+  overflow: hidden;
+  padding: 1rem;
+  position: fixed;
+  transition: 1s;
+  width: 290px;
   z-index: 10;
 }
 
@@ -38,8 +38,8 @@
 }
 
 .caret-wrapper:hover {
-  transform: scale(1.05);
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 .toggled-modal {
@@ -49,25 +49,25 @@
 }
 
 .caret {
-  box-shadow: gray 2px 2px 4px;
-  height: 30px;
-  position: relative;
-  top: -7px;
-  margin: 8px;
-  width: 55px;
-  float: right;
-  right: -17px;
-  border-radius: 10px;
   background-color: white;
+  border-radius: 10px;
   border: 2px solid #00c7d6;
+  box-shadow: gray 2px 2px 4px;
+  float: right;
   font-family: Itim, Arial, Sans-Serif;
   font-size: 0.9rem;
+  height: 30px;
+  margin: 8px;
+  position: relative;
+  right: -17px;
+  top: -7px;
+  width: 55px;
 }
 
 .caret:hover {
   background-color: #00c7d6;
-  color: white;
   border-color: #00ff00;
+  color: white;
   cursor: pointer;
   transform: scale(1);
   transition: .4s;

@@ -27,14 +27,14 @@ export default class Splash extends Component {
       <div className="splash">
         <h1 className='splash-title'>Fetch <i className="fas fa-dog"></i> </h1>
         <form>
-            <div className="switch">
+            <div className="switch three-switch">
               <input className='radios' type="radio" name="choose1" id='Male' value="Male" />
               <input className='radios' type="radio" name="choose1" id='Male Female' value="both" defaultChecked />
               <input className='radios' type="radio" name="choose1" id='Female' value="Female" />
             </div>
           </form>
           <form>
-            <div className="switch">
+            <div className="switch three-switch">
               <input className='radios' type="radio" name="choose2" value="Puppy" />
               <input className='radios' type="radio" name="choose2" value="both" defaultChecked />
               <input className='radios' type="radio" name="choose2" value="Adult" />
@@ -44,7 +44,7 @@ export default class Splash extends Component {
             <div className="switch">
               <input className='radios' type="radio" name="choose3" id='Large' value="Large" />
               <input className='radios' type="radio" name="choose3" id='Medium' value="Medium" />
-              <input className='radios' type="radio" name="choose3" id='Large Medium Small' value="both" defaultChecked />
+              <input className='radios' type="radio" name="choose3" id='Large Medium Small' value="all" defaultChecked />
               <input className='radios' type="radio" name="choose3" id='Small' value="Small" />
             </div>
           <button className='fetch-dogs-btn' onClick={ this.displayMainPage }>Fetch Dogs</button>

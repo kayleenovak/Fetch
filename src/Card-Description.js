@@ -7,7 +7,8 @@ export default class CardDescription extends Component {
     super();
     this.state = {
       displayDescription: true,
-      currentRescue: []
+      currentRescue: [],
+      showDescription: null
     }
   }
 
@@ -20,27 +21,25 @@ export default class CardDescription extends Component {
     let matchedRescue = this.props.rescues.find((currentRescue) => {
       return this.props.description.rescue.toLowerCase() === currentRescue.name.toLowerCase()
     })
-    console.log('matchedRescue', matchedRescue);
     this.state.currentRescue.push(matchedRescue);
-    // this.displayRescue(matchedRescue);
   }
 
-  // displayRescue = (matchedRescue) => {
-
-  //   return (
-  //     <Rescue className='rescue' matchedRescue={matchedRescue} />
-  //   }
-  // }
+  componentDidMount = () => {
+    this.setState({
+      showDescription: this.props.showDescription
+    }) 
+  }
 
   render() {
     const displayDescription = this.state.displayDescription;
+    console.log('card-desc show desc:', this.props.showDescription);
     return (
       <div className="card-desc">
       {displayDescription ?
           (
         <div> 
           <p className="top-p">{this.props.description.name}</p>
-          <p>{this.props.description.breed} {this.props.description.mix ? null : 'Mix' }</p>
+          <p>{this.props.description.breed} {this.props.description.mix_breed ? 'Mix' : null}</p>
           <p>{typeof(this.props.description.age) === 'string' ? this.props.description.age : this.props.description.age + ' yrs'}</p>
           <p>{this.props.description.gender}</p>
           <p>Size: {this.props.description.size}</p>
@@ -57,6 +56,7 @@ export default class CardDescription extends Component {
           <p className='rescue-info' >{this.state.currentRescue[0].Location}</p>
           <a className='rescue-info'  href='mailto:/{this.state.currentRescue[0].Email}/'>{this.state.currentRescue[0].Email}</a>
           <a className='rescue-info'  href={this.state.currentRescue[0].Webiste}>{this.state.currentRescue[0].Webiste}</a>
+          <button className='card-desc-btn' onClick={this.toggleRescue}>Rescue Me</button>
         </div>)
         }
     </div>

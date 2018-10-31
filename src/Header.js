@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <header>
         <h1 className='title'>
-          Fetch <i className="fas fa-dog"></i>
+          Fetch <i className="fas fa-dog a"></i>
         </h1>
 
       </header>

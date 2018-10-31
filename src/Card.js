@@ -5,11 +5,15 @@ import CardStyle from './Card.css';
 export default class Card extends Component {
   constructor() {
     super();
-    this.state = {showInfo: false}
+    this.state = {
+      showInfo: false,
+      showDescription: false
+    }
   }
 
   toggleInfo = (event) => {
-    this.setState({showInfo: !this.state.showInfo});
+    this.setState({showInfo: !this.state.showInfo,
+                  showDescription: !this.state.showDescription});
     event.target.previousSibling.classList.toggle('expanded-description');
     event.target.previousSibling.previousSibling.childNodes[0].classList.toggle('expanded-img');
     event.target.previousSibling.previousSibling.classList.toggle('img-overlay');
@@ -28,11 +32,10 @@ export default class Card extends Component {
       </div>
       <CardDescription description={this.props.dog} toggleInfo={this.toggleInfo} 
         rescues={this.props.rescues} />
-      <div onClick={this.toggleInfo} className= 'icon'>
+      <div onClick={this.toggleInfo} showDescription={this.state.showDescription} className='icon'>
         {icon}
       </div>
     </div>
     )
   }
 }
-        // <p>{showInfo ? this.props.dog.weight: null}</p>

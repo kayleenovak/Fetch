@@ -1,42 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+.fa-dog {
+  bottom: 7px;
+  font-size: 4rem;
+  position: relative;
+}
+
 .splash-cont {
   margin: 0 150px;
 }
+
 .switch {
-  display: flex;
-  flex-direction: row;
-  width: 135px;
+  background: linear-gradient(to right, hsl(0,0,90%), white, hsl(0,0,90%));
   border-radius: 20px;
   border: 1px gray;
-  background: linear-gradient(to right, hsl(0,0,90%), white, hsl(0,0,90%));
-  overflow: hidden;
   box-shadow: 2px 2px 8px lightgray inset;
-  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  margin: 11px 5px;
+  overflow: hidden;
+  width: 180px;
+}
+
+.three-switch {
+  padding-left: 22px;
 }
 
 .radios {
-  color: gray;  
   appearance: none;
-  display: block;
-  position: relative;
-  line-height: 1.5em;
-  height: 18px;
-  width: 40px;
   border: 0.1em solid transparent;
+  color: white;
+  display: block;
+  font-size: 0.7rem;
+  height: 18px;
+  line-height: 1.5em;
   outline: none;
+  position: relative;
   text-align: center;
+  width: 40px;
 }
 
 .radios:hover {
-  color: black;
+  color: purple;
 }
 
 .radios:checked {
-  transition: 1s;
-  border: 0.1em outset hsl(0,0,75%);
-  border-radius: 50px;
   background: linear-gradient(to right, white, hsl(0,0,95%));
+  border-radius: 50px;
+  border: 0.1em outset hsl(0,0,75%);
   box-shadow: 2px 2px 5px gray;
-  color: black;
+  color: purple;
+  transition: 1s;
 }
 
 .radios::after {
@@ -44,32 +60,31 @@
 }
 
 .splash {
-  position: absolute;
-  z-index: 5000;
+  align-items: center;
   background: #11c4d3;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
-  align-items: center
+  margin: 0;
+  position: absolute;
+  width: 100vw;
+  z-index: 5000;
 }
 
 .splash-title {
   color: white;
-  margin-top: 0;
   font-size: 6em;
+  margin-top: 0;
 }
 
 .fetch-dogs-btn {
   background-color: #865AB7; background-image: -webkit-gradient(linear, left top, left bottom, from(#865AB7), to(#3D2B81));
   border: none;
-  margin-left: -4.1px;
-  width: 150px;
-  height: 30px;
   color: white;
   font-size: 1em;
+  height: 30px;
+  width: 173px;
 }
 
 .fetch-dogs-btn:hover {
@@ -79,7 +94,7 @@
 .show-all-dogs-btn {
   background: none;
   border: none;
+  font-size: .8em;
   text-decoration: underline;
   width: 150px;
-  font-size: .8em;
 }
