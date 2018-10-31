@@ -7,8 +7,6 @@ import Filter from './Filter';
 import Search from './Search';
 import CardContainer from './Card-Container';
 
-
-
 export default class App extends Component {
   constructor() {
     super();

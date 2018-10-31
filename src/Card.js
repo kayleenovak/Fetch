@@ -7,7 +7,7 @@ export default class Card extends Component {
     super();
     this.state = {
       showInfo: false,
-    }
+    };
   }
 
   toggleInfo = (event) => {
