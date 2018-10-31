@@ -1,7 +1,6 @@
 .card {
-  overflow: hidden;
   border: solid #00c7d6 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 2px 2px 8px 1px grey;
   width: 100%;
   height: 250px;
@@ -9,14 +8,23 @@
   -moz-border-radius: 10px;
   background-color: #00c7d6;
   z-index: 0;
-  }
-
-.card:hover > .dog-img {
-  filter: blur(1px);
 }
 
-.card:hover > .card-desc {
-  text-decoration: blur;
+.img-overlay::after {
+  display: block;
+  position: relative;
+  background-image: -webkit-linear-gradient(top, rgba(225, 225, 225, 0) 0, #fff 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, black 150%);
+  margin-top: -97px;
+  height: 100px;
+  left: -5px;
+  top: -11px;
+  width: 104.5%;
+  content: '';
+}
+
+.card:hover > .img-overlay::after {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, black 1000%);
 }
 
 .card:hover {
@@ -27,20 +35,34 @@
 }
 
 .expanded-card {
-  height: 525px;
-  grid-column: span 6;
+  height: 533px;
+  grid-column: span 3;
+  grid-row: span 2;
   transition: 1s;
 }
 
 .dog-img {
-  width: 100%;
+  width: 104.5%;
+  position: relative;
+  left: -5px;
   height: 100px;
+  top: -5px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px 5px 0 0;
+
 }
+
+.dog-img::after {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(blue, pink);
+  z-index: -1;
+
+}
+
 
 .expanded-img {
   height: 220px;
+  width: 101.35%;
 }
 
 .icon {
