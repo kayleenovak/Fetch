@@ -59,7 +59,6 @@ export default class App extends Component {
     event.preventDefault()
     this.getCheckedRadios()
     let sizeCheckbox = this.state.checkedBoxes[1].id.toLowerCase()
-    console.log(this.state.unfilteredDogs)
     let filteredDogs = this.state.unfilteredDogs.filter(dog => {
       let dogSize = dog.size.toLowerCase()
       if(this.state.checkedBoxes[0].id.includes(dog.gender) && sizeCheckbox.includes(dogSize)) {

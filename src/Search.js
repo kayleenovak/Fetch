@@ -8,7 +8,7 @@ export default class Search extends Component {
     super()
     this.state = {
       dogNames: [],
-      prefixTrie: null,
+      prefixTrie: [],
       suggestions: []
     }
   }
@@ -21,21 +21,19 @@ export default class Search extends Component {
   // When the user clicks on the suggestion, it should autopopulate into the search bar
   // The suggestions should be some sort of HTML structure
   // npm update - change to lowercase in traversedown - tolowercase before the split
-  setAutoCompleteData = () => {
-    let dogNames = this.props.unfilteredDogs.map(dog => {
+  setAutoCompleteData = (event) => {
+    let allDogNames = this.props.unfilteredDogs.map(dog => {
       return dog.name
     })
     let newTrie = new Trie();
-    dogNames.forEach(name => {
+    allDogNames.forEach(name => {
       newTrie.insert(name)
     })
-    this.setState({
-      dogNames: dogNames,
-      prefixTrie: newTrie
-    })
+    this.state.dogNames = allDogNames;
+    this.state.prefixTrie = newTrie;
   }
   
-  autoComplete(event) {
+  autoComplete = (event) => {
     let prefix = event.target.value
     let suggestions = this.state.prefixTrie.suggest(prefix)
     console.log(suggestions)
