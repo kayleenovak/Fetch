@@ -26,6 +26,8 @@ export default class Splash extends Component {
     return (
       <div className="splash">
         <h1 className='splash-title'>Fetch <i className="fas fa-dog"></i> </h1>
+        <h5 className='slogan'>Where dogs find their fur-ever home</h5>
+        <h5 className='dog-preference'>Help us find your next dog</h5>
         <form>
           <div className="switch">
             <input className='radios' type="radio" name="choose1" id='Male' value="Male" />
