@@ -1,7 +1,0 @@
-.rescue {
-  position: absolute;
-  z-index: 999999999999999999;
-  height: 500px;
-  width: 500px;
-  background-color: green;
-}
