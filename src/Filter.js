@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import FilterStyle from './Filter.css';
-import AppStyle from './App.css';
+import AppStyle from './App.scss';
 import Option from './Option.js';
 
 
