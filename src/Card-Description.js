@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import cardDescriptionStyle from './Card-Description.scss';
+import './Card-Description.scss';
 
 export default class CardDescription extends Component {
   constructor() {
