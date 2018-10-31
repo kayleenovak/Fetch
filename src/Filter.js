@@ -21,7 +21,7 @@ export default class Filter extends Component {
   }
 
   generateUniqueOptions = () => {
-    this.state.dogArray = this.props.allDogs(this.props.adoptableDogs)
+    this.state.dogArray = this.props.unfilteredDogs
     this.state.dogArray.forEach((currentDog) => {
       if (!this.state.uniqueBreedsArray.includes(currentDog.breed)) {
         this.state.uniqueBreedsArray.push(currentDog.breed);
