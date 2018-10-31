@@ -19,9 +19,7 @@ export default class App extends Component {
       checkedBoxes: [],
       filteredDogs: [],
       selectedBreed: []
-    };
-    // this.filterDogs = this.filterDogs.bind(this);
-    // this.allDogs = this.allDogs.bind(this)
+    };  
   }
 
   componentDidMount = () => {
@@ -60,9 +58,8 @@ export default class App extends Component {
     event.preventDefault()
     this.allDogs(this.state.adoptableDogs)
     this.getCheckedRadios()
-    let dogs = this.allDogs(this.state.adoptableDogs);
     let sizeCheckbox = this.state.checkedBoxes[1].id.toLowerCase()
-    let filteredDogs = dogs.filter(dog => {
+    let filteredDogs = this.state.unfilteredDogs.filter(dog => {
       let dogSize = dog.size.toLowerCase()
       if(this.state.checkedBoxes[0].id.includes(dog.gender) && sizeCheckbox.includes(dogSize)) {
         return dog
@@ -168,7 +165,7 @@ export default class App extends Component {
         filterAge={this.filterAge} 
         filterPure={this.filterPure}
         filterTrained={this.filterTrained} />
-        <Search searchFilter={ this.searchFilter } resetDogs={this.resetDogs} />
+        <Search unfilteredDogs={ this.state.unfilteredDogs } searchFilter={ this.searchFilter } resetDogs={this.resetDogs} />
         <CardContainer dogs={ this.state.filteredDogs } adoptableDogs={ this.state.adoptableDogs} allDogs = { this.allDogs } 
           rescues={this.state.rescues}/>
         <Footer filteredDogs={this.state.filteredDogs} />
