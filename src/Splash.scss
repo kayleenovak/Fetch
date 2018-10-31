@@ -2,6 +2,7 @@
 
 .splash-cont {
   margin: 0 150px;
+
 }
 .switch {
   display: flex;
@@ -73,7 +74,6 @@
   background-color: $color-purple; 
   background-image: -webkit-gradient(linear, left top, left bottom, from($color-purple), to(#3D2B81));
   border: none;
-  margin-left: -4.1px;
   width: 150px;
   height: 30px;
   color: white;
