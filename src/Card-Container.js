@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import './App.css';
+import './App.scss';
 
 import cardContainerStyle from './Card-Container.css';
 
