@@ -20,7 +20,7 @@
 .top-p {
   margin: 6px 0 8px 0;
   font-size: 2rem;
-  color: #402D83;
+  color: $color-purple;
 }
 
 p {
@@ -33,7 +33,7 @@ a {
 }
 
 .rescue-info {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid $color-grey;
   font-size: 1.5rem;
   margin-left: 10px;
 }
