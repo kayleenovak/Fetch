@@ -22,13 +22,13 @@ export default class Card extends Component {
     icon = showInfo ? ' - ' : ' + ';
 
   return (
-    <div className="card">
+    <div className="card effect2">
       <div className="img-overlay">
         <img src={this.props.dog.img} className="dog-img" />
       </div>
       <CardDescription description={this.props.dog} toggleInfo={this.toggleInfo} 
         rescues={this.props.rescues} />
-      <div onClick={this.toggleInfo} className= 'icon'>
+      <div onClick={this.toggleInfo} className='icon'>
         {icon}
       </div>
     </div>
