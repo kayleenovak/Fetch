@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import cardDescriptionStyle from './Card-Description.scss';
-import Rescue from './Rescue.js';
 
 export default class CardDescription extends Component {
   constructor() {
@@ -22,15 +21,8 @@ export default class CardDescription extends Component {
     })
     console.log('matchedRescue', matchedRescue);
     this.state.currentRescue.push(matchedRescue);
-    // this.displayRescue(matchedRescue);
   }
 
-  // displayRescue = (matchedRescue) => {
-
-  //   return (
-  //     <Rescue className='rescue' matchedRescue={matchedRescue} />
-  //   }
-  // }
 
   render() {
     const displayDescription = this.state.displayDescription;
