@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import FilterStyle from './Filter.scss';
-import AppStyle from './App.scss';
+import './main.scss';
 import Option from './Option.js';
 
 
@@ -11,22 +10,23 @@ export default class Filter extends Component {
       dogArray: null,
       uniqueBreedsArray: [],
 
-    }
+    };
   }
 
   toggleModal = (event) => {
     this.generateUniqueOptions();
-    event.target.parentElement.parentElement.classList.toggle('toggled-modal')
+    event.target.parentElement.parentElement.classList.toggle('toggled-modal');
   }
 
   generateUniqueOptions = () => {
-    this.state.dogArray = this.props.unfilteredDogs
+    this.state.dogArray = this.props.unfilteredDogs;
     this.state.dogArray.forEach((currentDog) => {
       if (!this.state.uniqueBreedsArray.includes(currentDog.breed)) {
         this.state.uniqueBreedsArray.push(currentDog.breed);
-      };
+      }
     });
     let sortedArray = this.state.uniqueBreedsArray.sort();
+
     this.setState({uniqueBreedsArray: sortedArray});
   }
 
@@ -42,7 +42,7 @@ export default class Filter extends Component {
           <select>
             {
               this.state.uniqueBreedsArray.map((currentBreed) => {
-                return <Option currentBreed={currentBreed} />
+                return <Option currentBreed={currentBreed} />;
               })
             }
           </select>
@@ -81,6 +81,6 @@ export default class Filter extends Component {
           <button className='other-btn modal-btn' onClick={this.props.filterTrained}>House Trained</button>      
         </div>
       </div>
-    )
+    );
   }
 }

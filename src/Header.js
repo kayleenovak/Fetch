@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './Header.scss'
-import './App.scss';
+import './main.scss';
 
 
 class Header extends Component {
@@ -12,7 +11,7 @@ class Header extends Component {
         </h1>
 
       </header>
-    )
+    );
   }
 }
 

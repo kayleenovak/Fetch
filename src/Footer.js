@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
-import './Footer.scss';
-
+import './main.scss';
 
 export default class Footer extends Component {
   render() {
@@ -9,6 +7,6 @@ export default class Footer extends Component {
       <footer>
         <h1>{this.props.filteredDogs.length > 0 ? null : 'Sorry No Results Found'}</h1>
       </footer>
-    )
+    );
   }
 }
