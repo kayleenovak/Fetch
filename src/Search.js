@@ -14,14 +14,6 @@ export default class Search extends Component {
     }
   }
 
-  // instantiate a new tree
-  // populate it with whatever data a user can search for
-  // On change of a type we will take that value on change and should be calling tree.suggest(prefix)
-  // The suggest method will return an array
-  // Save the suggestions as a state in order to trigger the rerender
-  // When the user clicks on the suggestion, it should autopopulate into the search bar
-  // The suggestions should be some sort of HTML structure
-  // npm update - change to lowercase in traversedown - tolowercase before the split
   setAutoCompleteData = (event) => {
     let allDogNames = this.props.unfilteredDogs.map(dog => {
       return dog.name

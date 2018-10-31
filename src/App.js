@@ -55,8 +55,8 @@ export default class App extends Component {
   }
 
   filterDogs = (event) => {
-    this.allDogs(this.state.adoptableDogs)
     event.preventDefault()
+    this.allDogs(this.state.adoptableDogs)
     this.getCheckedRadios()
     let sizeCheckbox = this.state.checkedBoxes[1].id.toLowerCase()
     let filteredDogs = this.state.unfilteredDogs.filter(dog => {
