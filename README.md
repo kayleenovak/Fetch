@@ -10,9 +10,10 @@ The App gives users a list of adoptable dogs and gives them a way to filter out 
 
 ## Screenshots
 # Splash Page
-<img width="1440" alt="screen shot 2018-10-31 at 3 21 10 pm" src="https://user-images.githubusercontent.com/40470660/47819886-6c928100-dd21-11e8-96b6-8f154fbaa6cb.png">
 
-<img width="1440" alt="screen shot 2018-10-31 at 3 21 18 pm" src="https://user-images.githubusercontent.com/40470660/47819929-89c74f80-dd21-11e8-97c9-90f0b430767f.png">
+<img width="1440" alt="screen shot 2018-10-31 at 5 36 13 pm" src="https://user-images.githubusercontent.com/40470660/47824672-9654a380-dd33-11e8-84b6-e3234e681aa1.png">
+
+<img width="1440" alt="screen shot 2018-10-31 at 5 36 24 pm" src="https://user-images.githubusercontent.com/40470660/47824675-9785d080-dd33-11e8-8f3d-0e4db66c76f0.png">
 
 # Home-Screen
 <img width="1440" alt="screen shot 2018-10-31 at 3 19 50 pm" src="https://user-images.githubusercontent.com/40470660/47819987-b8452a80-dd21-11e8-8ee6-10e7790b5d08.png">
